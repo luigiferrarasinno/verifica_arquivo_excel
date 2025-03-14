@@ -16,7 +16,7 @@ O script `main.py` lê um arquivo Excel, infere o esquema de dados com base nas 
 
 1. Clone este repositório:
     ```sh
-    git clone <URL_DO_REPOSITORIO>
+    git clone <https://github.com/luigiferrarasinno/verifica_arquivo_excel.git>
     ```
 2. Navegue até o diretório do projeto:
     ```sh
