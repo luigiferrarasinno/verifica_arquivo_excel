@@ -27,4 +27,4 @@ with gr.Blocks() as app:
     output_text = gr.Textbox()
     file_input.change(handle_upload, inputs=file_input, outputs=output_text)
 
-app.launch()
+app.launch(share=True)
