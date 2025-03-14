@@ -4,13 +4,14 @@ Este projeto foi desenvolvido por Luigi Ferrara e tem como objetivo validar os d
 
 ## Descrição
 
-O script `main.py` lê um arquivo Excel, infere o esquema de dados com base nas três primeiras linhas de cada coluna e valida os dados de acordo com o esquema inferido. Os dados incorretos são salvos em um novo arquivo Excel chamado `dados_incorretos.xlsx`.
+O script `main.py` utiliza a biblioteca Gradio para criar uma interface web que permite o upload de arquivos Excel para validação. O arquivo é validado com base em um esquema inferido das três primeiras linhas de cada coluna. Os dados incorretos são salvos em um novo arquivo Excel chamado `dados_incorretos.xlsx`.
 
 ## Requisitos
 
 - Python 3.x
 - Pandas
 - Pandera
+- Gradio
 
 ## Instalação
 
@@ -24,23 +25,23 @@ O script `main.py` lê um arquivo Excel, infere o esquema de dados com base nas 
     ```
 3. Instale as dependências:
     ```sh
-    pip install pandas pandera
+    pip install pandas pandera gradio
     ```
 
 ## Uso
 
-1. Coloque o arquivo Excel que deseja validar no diretório do projeto.
-2. Edite a última linha do arquivo `main.py` para incluir o nome do seu arquivo Excel:
-    ```python
-    validar_dados_excel("seu_arquivo.xlsx")
-    ```
-3. Execute o script:
+1. Execute o script `main.py` para iniciar a interface web:
     ```sh
     python main.py
     ```
+2. Acesse a interface web no seu navegador.
+3. Faça o upload do arquivo Excel que deseja validar.
+4. O resultado da validação será exibido na interface e, se houver dados incorretos, um arquivo `dados_incorretos.xlsx` será gerado no diretório do projeto.
 
 ## Exemplo
 
 ```python
-# Exemplo de chamada da função
-validar_dados_excel("teste3.xlsx")
+# Exemplo de chamada da função diretamente
+from functions.validacao import validar_dados_excel
+validar_dados_excel("seu_arquivo.xlsx")
+```
