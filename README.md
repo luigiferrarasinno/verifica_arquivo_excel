@@ -1,4 +1,4 @@
-# verifica_arquivo_excel# Verifica Arquivo Excel
+# Verifica Arquivo Excel
 
 Este projeto foi desenvolvido por Luigi Ferrara e tem como objetivo validar os dados de um arquivo Excel, identificando e salvando os dados incorretos em um novo arquivo.
 
